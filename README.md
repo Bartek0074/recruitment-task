@@ -6,7 +6,7 @@ Na samym wstępie chcemy Ci bardzo podziękować za poświęcony czas i udział 
 
 ## Cel zadania
 
-Twoim zadaniem jest wdrożenie interaktywnego komponentu slidera na podstawie dostarczonego projektu graficznego.
+Twoim zadaniem jest wdrożenie interaktywnego komponentu slidera na podstawie dostarczonego projektu graficznego. W projekcie znajduje się prototyp animacji, ale jeżeli uznasz, że jesteś w stanie wdrożyć takie animacje, które zapewnią bardziej atrakcyjny efekt wizualny - śmiało!
 
 ## Wymagania i wytyczne
 
