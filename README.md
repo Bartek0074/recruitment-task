@@ -13,7 +13,7 @@ Twoim zadaniem jest wdrożenie interaktywnego komponentu slidera na podstawie do
 Aby ułatwić Ci pracę, zebraliśmy najważniejsze założenia projektu:
 
 - **Pełny ekran:** Komponent slidera powinien zajmować cały dostępny viewport przeglądarki.
-- **Responsywność (Desktop):** W tym zadaniu oceniamy **jedynie** responsywność desktopową. Skup się na przedziale szerokości ekranu **od 1920px do 3840px**.
+- **Responsywność (Desktop):** W tym zadaniu oceniamy **jedynie** responsywność desktopową. Skup się na przedziale szerokości ekranu **od 1280px do 3840px**.
 - **Dynamiczne dane (CMS):** Treści wyświetlane w sliderze muszą być zasilane z zewnętrznego pliku `data.json`. Symuluje to pobieranie danych z systemu CMS. Pamiętaj, że dane mogą ulec zmianie, więc Twój kod powinien być elastyczny i gotowy na różne warianty.
 - **Obsługa multimediów:** Poszczególne slajdy mogą zawierać zarówno obrazy (image), jak i wideo (video). Twój komponent musi to uwzględniać i poprawnie renderować odpowiedni typ mediów.
 - **Dowolność narzędzi:** Masz pełną swobodę w doborze narzędzi! Możesz wykorzystać dowolne paczki i biblioteki (np. do animacji czy obsługi slidera) – zrób to tak, jak uważasz za słuszne.
