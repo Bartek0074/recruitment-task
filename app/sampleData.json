@@ -1,0 +1,32 @@
+{
+  "heroSlider": [
+    {
+      "caption": "Timber. \nOn your terms.",
+      "description": "Precision. Punctuality. Partnerships as reliable as our timber. Meet the new standard in woodcraft. High-grade wood, treated in compliance with IPPC/ISPM15 standards. Always delivered on time. Aligned with your production cycle. Supplied on your terms. ",
+      "mainMedia": {
+        "mediaType": "video",
+        "video": "https://resources.247studio.co/rodeer/COLORED_FULL_NO_AUDIO.mp4"
+      }
+    },
+    {
+      "caption": "Timber. \nOn time.",
+      "description": "From the very beginning, we’ve delivered premium timber. Mastered European logistics. Engineered wood solutions. Today, we’re a trusted partner to the world’s most demanding brands and industries.Because being first means being on time.",
+      "mainMedia": {
+        "image": {
+          "url": "https://cdn.sanity.io/images/4opztuue/production/98c8fb901cc8f1cc9a1db9827b5172fc6e421c0e-4096x2732.jpg"
+        },
+        "mediaType": "image"
+      }
+    },
+    {
+      "caption": "Timber. \nOn point.",
+      "description": "We always deliver more: agile in execution. Disciplined in process. Reliable across every workflow. Every solution at Rodeer is tailored to each business’s requirements, timelines, and operational models. Always on brief. Always on point.",
+      "mainMedia": {
+        "image": {
+          "url": "https://cdn.sanity.io/images/4opztuue/production/48e0f1a52bf7559e851963a5ba765a3fb0bbb806-1455x1070.jpg"
+        },
+        "mediaType": "image"
+      }
+    }
+  ]
+}
