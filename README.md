@@ -23,7 +23,7 @@ Aby ułatwić Ci pracę, zebraliśmy najważniejsze założenia projektu:
 Projekt przygotowaliśmy w Figmie. Możesz z niego skorzystać na dwa sposoby:
 
 - **Podgląd online:** [Zobacz projekt w Figmie](https://www.figma.com/design/f74PvOxHn8OF70L7NB9Ml2/Recruitment-Task?node-id=0-1&t=XjeBnUZpvtC5Psfg-1)
-- **Plik źródłowy:** [Pobierz plik .fig do zaimportowania](https://www.dropbox.com/scl/fi/frhes8dzihh31f6ldghbb/Recruitment-Task.fig?rlkey=1ar1ya5tgay4iano4e6f03oln&st=2gjot4gc&dl=0)
+- **Plik źródłowy:** [Pobierz plik .fig do zaimportowania](https://www.dropbox.com/scl/fi/frhes8dzihh31f6ldghbb/Recruitment-Task.fig?rlkey=1ar1ya5tgay4iano4e6f03oln&st=2gjot4gc&dl=1)
 
 ## Jak dostarczyć rozwiązanie?
 
