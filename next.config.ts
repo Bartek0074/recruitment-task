@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import { join } from 'path';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  sassOptions: {
+    includePaths: [join(__dirname, 'app')],
+  },
 };
 
 export default nextConfig;
