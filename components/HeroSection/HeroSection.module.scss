@@ -1,0 +1,9 @@
+@use '../../app/variables' as *;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
