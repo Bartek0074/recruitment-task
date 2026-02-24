@@ -1,6 +1,9 @@
 import data from '@/app/sampleData.json'; // Use this sample data for the task.
+import { SlideType } from '@/types';
 
 export default function Home() {
+  const slides = data.heroSlider as SlideType[];
+
   return (
     <main>
       <h1>Heading 1</h1>
