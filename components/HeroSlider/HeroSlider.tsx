@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 import styles from './HeroSlider.module.scss';
+
+import { useHeroSlider } from './useHeroSlider';
 
 import { motion } from 'motion/react';
 
@@ -18,40 +18,19 @@ type Props = {
 };
 
 export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideIndex }: Props) {
-  const [shouldAnimate, setShouldAnimate] = useState(true);
-
-  const resetIndex = (index: number) => {
-    if (index === 0) return slides.length - 3;
-    if (index === slides.length - 2) return 1;
-    return index;
-  };
-
-  useEffect(() => {
-    if (!slides.length) return;
-
-    if (currentSlideIndex === 0 || currentSlideIndex === slides.length - 2) {
-      const timeout = setTimeout(
-        () => {
-          setShouldAnimate(false);
-          setCurrentSlideIndex(resetIndex(currentSlideIndex));
-        },
-        Math.max(RESIZE_ANIMATION_DURATION, TRANSLATE_ANIMATION_DURATION)
-      );
-      return () => clearTimeout(timeout);
-    }
-
-    setShouldAnimate(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentSlideIndex, slides]);
+  const { shouldAnimate } = useHeroSlider({
+    slides,
+    currentSlideIndex,
+    setCurrentSlideIndex,
+    animationDuration: Math.max(RESIZE_ANIMATION_DURATION, TRANSLATE_ANIMATION_DURATION),
+  });
 
   if (!slides.length) return null;
 
   return (
     <motion.div
       className={styles.container}
-      initial={{
-        x: `-${currentSlideIndex * 25}%`,
-      }}
+      initial={false}
       animate={{
         x: `-${currentSlideIndex * 25}%`,
       }}
@@ -68,10 +47,7 @@ export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideI
         return (
           <motion.div
             key={index}
-            initial={{
-              flexBasis: isActive ? '75%' : '25%',
-              maxHeight: isActive ? '100%' : 'auto',
-            }}
+            initial={false}
             animate={{
               flexBasis: isActive ? '75%' : '25%',
               maxHeight: isActive ? '100%' : 'auto',
