@@ -4,7 +4,7 @@
   position: absolute;
   bottom: 3rem;
   right: 3rem;
-  gap: 1.6rem;
+  gap: 1.7rem;
   display: flex;
 
   .button {
@@ -41,17 +41,32 @@
     gap: 1.8rem;
 
     .button {
-      width: 7.2rem;
-      height: 7.2rem;
+      width: 6.9rem;
+      height: 6.9rem;
 
       .icon {
-        width: 2.4rem;
+        width: 2.3rem;
       }
     }
   }
 }
 
 @media (min-width: $breakpoint-2xl) {
+  .container {
+    gap: 1.9rem;
+
+    .button {
+      width: 7.2rem;
+      height: 7.2rem;
+
+      .icon {
+        width: 2.45rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-3xl) {
   .container {
     gap: 2rem;
 
@@ -66,25 +81,9 @@
   }
 }
 
-@media (min-width: $breakpoint-3xl) {
-  .container {
-    gap: 2rem;
-
-    .button {
-      width: 8rem;
-      height: 8rem;
-
-      .icon {
-        width: 2.7rem;
-      }
-    }
-  }
-}
-
 @media (min-width: $breakpoint-4xl) {
   .container {
     gap: 2.2rem;
-
     .button {
       width: 8.4rem;
       height: 8.4rem;
@@ -97,11 +96,12 @@
 
 @media (min-width: $breakpoint-5xl) {
   .container {
+    gap: 2.5rem;
     .button {
-      width: 8.8rem;
-      height: 8.8rem;
+      width: 9.5rem;
+      height: 9.5rem;
       .icon {
-        width: 3rem;
+        width: 3.2rem;
       }
     }
   }
