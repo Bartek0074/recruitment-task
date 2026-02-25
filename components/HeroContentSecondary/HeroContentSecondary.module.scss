@@ -1,0 +1,70 @@
+@use '../../app/variables' as *;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: absolute;
+
+  bottom: calc(-10px + 25vw + 1.8rem);
+  left: calc(-10px + 75vw + 1.8rem);
+  width: 17.5vw;
+  z-index: 10;
+  color: $grey;
+
+  @media (min-width: $breakpoint-xl) {
+    bottom: calc(-10px + 25vw + 2.4rem);
+    left: calc(-10px + 75vw + 2.4rem);
+  }
+
+  @media (min-width: $breakpoint-2xl) {
+    bottom: calc(-10px + 25vw + 2.7rem);
+    left: calc(-10px + 75vw + 2.7rem);
+  }
+
+  @media (min-width: $breakpoint-3xl) {
+    bottom: calc(-10px + 25vw + 3rem);
+    left: calc(-10px + 75vw + 3rem);
+  }
+
+  .title {
+    white-space: pre-line;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-right: 1.3rem;
+    margin-top: 0.6rem;
+    height: 2.1rem;
+
+    @media (min-width: $breakpoint-xl) {
+      margin-right: 1.4rem;
+      margin-top: 0.7rem;
+      height: 2.2rem;
+    }
+
+    @media (min-width: $breakpoint-2xl) {
+      margin-right: 1.5rem;
+      margin-top: 0.7rem;
+      height: 2.3rem;
+    }
+
+    @media (min-width: $breakpoint-3xl) {
+      margin-right: 1.5rem;
+      margin-top: 0.7rem;
+      height: 2.4rem;
+    }
+
+    @media (min-width: $breakpoint-4xl) {
+      margin-right: 1.7rem;
+      margin-top: 0.8rem;
+      height: 2.8rem;
+    }
+
+    @media (min-width: $breakpoint-5xl) {
+      margin-right: 1.9rem;
+      margin-top: 1rem;
+      height: 3.4rem;
+    }
+  }
+}

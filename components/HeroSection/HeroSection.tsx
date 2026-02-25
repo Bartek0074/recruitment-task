@@ -4,7 +4,14 @@ import styles from './HeroSection.module.scss';
 
 import { useHeroSection } from './useHeroSection';
 
-import { Logo, Controls, HeroContent, HeroSlider, StatementImage } from '../index';
+import {
+  Logo,
+  Controls,
+  HeroContent,
+  HeroContentSecondary,
+  HeroSlider,
+  StatementImage,
+} from '../index';
 
 import { SlideType } from '@/types/';
 
@@ -21,6 +28,9 @@ export default function HeroSection({ slides }: Props) {
       <HeroContent
         title={loopedSlides[currentSlideIndex].caption}
         text={loopedSlides[currentSlideIndex].description}
+      />
+      <HeroContentSecondary
+        title={loopedSlides[(currentSlideIndex + 1) % loopedSlides.length].caption}
       />
       <HeroSlider
         slides={loopedSlides}
