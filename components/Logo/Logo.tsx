@@ -10,7 +10,7 @@ export default function Logo() {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.link}>
-        <Image src={LogoImage} className={styles.img} alt="Logo" />
+        <Image src={LogoImage} className={styles.img} alt="Logo" priority />
       </Link>
     </div>
   );
