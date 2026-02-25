@@ -5,7 +5,7 @@ import { HeroSection } from '@/components';
 const slides = data.heroSlider as SlideType[]; // Static data for task. Normally, this would be fetched from an API - ISR or SSR.
 
 export const metadata = {
-  title: slides[0].caption,
+  title: `Rodeer - ${slides[0].caption}`,
   description: slides[0].description,
 };
 
