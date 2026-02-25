@@ -1,5 +1,7 @@
 import data from '@/app/sampleData.json'; // Use this sample data for the task.
+
 import { SlideType } from '@/types';
+
 import { HeroSection } from '@/components';
 
 const slides = data.heroSlider as SlideType[]; // Static data for task. Normally, this would be fetched from an API - ISR or SSR.
@@ -7,6 +9,7 @@ const slides = data.heroSlider as SlideType[]; // Static data for task. Normally
 export const metadata = {
   title: `Rodeer - ${slides[0].caption}`,
   description: slides[0].description,
+  // Here we need to add more properties for better SEO.
 };
 
 export default function Home() {
