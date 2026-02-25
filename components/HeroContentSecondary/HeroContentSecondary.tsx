@@ -1,6 +1,6 @@
 import styles from './HeroContentSecondary.module.scss';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 import { PlusIcon } from '@/icons';
 

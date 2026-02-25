@@ -4,7 +4,7 @@ import styles from './HeroSection.module.scss';
 
 import { useHeroSection } from './useHeroSection';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 import {
   Logo,
