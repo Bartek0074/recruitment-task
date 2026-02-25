@@ -4,7 +4,7 @@ import styles from './HeroSection.module.scss';
 
 import { useHeroSection } from './useHeroSection';
 
-import { Controls, HeroSlider } from '../index';
+import { Logo, Controls, HeroSlider } from '../index';
 
 import { SlideType } from '@/types/';
 
@@ -16,6 +16,7 @@ export default function HeroSection({ slides }: Props) {
 
   return (
     <section className={styles.container}>
+      <Logo />
       <HeroSlider
         slides={loopedSlides}
         currentSlideIndex={currentSlideIndex}
