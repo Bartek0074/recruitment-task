@@ -1,0 +1,50 @@
+@use '../../app/variables' as *;
+
+.container {
+  position: absolute;
+  z-index: 10;
+  top: 3.8rem;
+  right: 1.8rem;
+  left: calc(-10px + 75vw + 1.8rem);
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    top: 4.4rem;
+    right: 2.4rem;
+    left: calc(-10px + 75vw + 2.4rem);
+  }
+}
+
+@media (min-width: $breakpoint-2xl) {
+  .container {
+    top: 5rem;
+    right: 2.7rem;
+    left: calc(-10px + 75vw + 2.7rem);
+  }
+}
+
+@media (min-width: $breakpoint-3xl) {
+  .container {
+    top: 5.6rem;
+    right: 3rem;
+    left: calc(-10px + 75vw + 3rem);
+  }
+}
+
+@media (min-width: $breakpoint-4xl) {
+  .container {
+    top: 6rem;
+  }
+}
+
+@media (min-width: $breakpoint-5xl) {
+  .container {
+    top: 6.4rem;
+  }
+}
