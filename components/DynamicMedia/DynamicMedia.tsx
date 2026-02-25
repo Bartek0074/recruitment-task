@@ -1,3 +1,5 @@
+// There is no alt for img and aria-label for video in sampleData.json, so I left them empty.
+
 import styles from './DynamicMedia.module.scss';
 
 import Image from 'next/image';
