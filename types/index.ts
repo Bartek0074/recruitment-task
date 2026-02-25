@@ -1,3 +1,4 @@
+import { MediaType } from './media';
 import { SlideType } from './slide';
 
-export type { SlideType };
+export type { MediaType, SlideType };

@@ -4,6 +4,8 @@ import styles from './HeroSlider.module.scss';
 
 import { useHeroSlider } from './useHeroSlider';
 
+import { DynamicMedia } from '../index';
+
 import { motion } from 'motion/react';
 
 import { SlideType } from '@/types/';
@@ -59,11 +61,9 @@ export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideI
               mass: 1,
               duration: shouldAnimate ? RESIZE_ANIMATION_DURATION / 1000 : 0,
             }}
-            className={styles.element}
+            className={`${styles.element} ${isActive ? styles['element-active'] : ''}`}
           >
-            <div className={styles.content}>
-              <h2>{slide.caption}</h2>
-            </div>
+            <DynamicMedia media={slide.mainMedia} priority={index === 1 || index === 2} />
           </motion.div>
         );
       })}

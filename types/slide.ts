@@ -1,19 +1,7 @@
-import { MediaTypeEnum } from '@/enums';
-
-type ImageMedia = {
-  mediaType: MediaTypeEnum.IMAGE;
-  image: {
-    url: string;
-  };
-};
-
-type VideoMedia = {
-  mediaType: MediaTypeEnum.VIDEO;
-  video: string;
-};
+import { MediaType } from './media';
 
 export type SlideType = {
   caption: string;
   description: string;
-  mainMedia: ImageMedia | VideoMedia;
+  mainMedia: MediaType;
 };
