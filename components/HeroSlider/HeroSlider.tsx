@@ -1,5 +1,7 @@
 'use client';
 
+import { useRef } from 'react';
+
 import styles from './HeroSlider.module.scss';
 
 import { useHeroSlider } from './useHeroSlider';
@@ -8,10 +10,13 @@ import { DynamicMedia } from '../index';
 
 import { motion } from 'motion/react';
 
+import useMeasure from 'use-measure';
+
 import { SlideType } from '@/types/';
 
 const TRANSLATE_ANIMATION_DURATION = 600;
 const RESIZE_ANIMATION_DURATION = 900;
+const PADDING = 10;
 
 type Props = {
   slides: SlideType[];
@@ -20,6 +25,10 @@ type Props = {
 };
 
 export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideIndex }: Props) {
+  const containerRef = useRef(null);
+
+  const { width, height } = useMeasure(containerRef);
+
   const { shouldAnimate } = useHeroSlider({
     slides,
     currentSlideIndex,
@@ -31,6 +40,7 @@ export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideI
 
   return (
     <motion.div
+      ref={containerRef}
       className={styles.container}
       initial={false}
       animate={{
@@ -44,29 +54,33 @@ export default function HeroSlider({ slides, currentSlideIndex, setCurrentSlideI
         duration: shouldAnimate ? TRANSLATE_ANIMATION_DURATION / 1000 : 0,
       }}
     >
-      {slides.map((slide, index) => {
-        const isActive = index === currentSlideIndex;
-        return (
-          <motion.div
-            key={index}
-            initial={false}
-            animate={{
-              flexBasis: isActive ? '75%' : '25%',
-              maxHeight: isActive ? '100%' : 'auto',
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 100,
-              damping: 16,
-              mass: 1,
-              duration: shouldAnimate ? RESIZE_ANIMATION_DURATION / 1000 : 0,
-            }}
-            className={`${styles.element} ${isActive ? styles['element-active'] : ''}`}
-          >
-            <DynamicMedia media={slide.mainMedia} priority={index === 1 || index === 2} />
-          </motion.div>
-        );
-      })}
+      {height &&
+        width &&
+        slides.map((slide, index) => {
+          const isActive = index === currentSlideIndex;
+          const flexBasis = isActive ? '75%' : '25%';
+          const maxHeight = isActive ? height : width / 4 - PADDING;
+          return (
+            <motion.div
+              key={index}
+              initial={false}
+              animate={{
+                flexBasis,
+                maxHeight,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 100,
+                damping: 16,
+                mass: 1,
+                duration: shouldAnimate ? RESIZE_ANIMATION_DURATION / 1000 : 0,
+              }}
+              className={styles.element}
+            >
+              <DynamicMedia media={slide.mainMedia} priority={index === 1 || index === 2} />
+            </motion.div>
+          );
+        })}
     </motion.div>
   );
 }

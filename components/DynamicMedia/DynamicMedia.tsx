@@ -19,7 +19,7 @@ export default function DynamicMedia({ media, priority = false }: Props) {
           fill
           priority={priority}
           sizes="75vw"
-          loading='eager'
+          loading="eager"
         />
       </div>
     );
