@@ -4,6 +4,8 @@ import styles from './HeroSection.module.scss';
 
 import { useHeroSection } from './useHeroSection';
 
+import { motion } from 'framer-motion';
+
 import {
   Logo,
   Controls,
@@ -15,6 +17,8 @@ import {
 
 import { SlideType } from '@/types/';
 
+const ANIMATION_DURATION = 900;
+
 type Props = { slides: SlideType[] };
 
 export default function HeroSection({ slides }: Props) {
@@ -22,7 +26,18 @@ export default function HeroSection({ slides }: Props) {
     useHeroSection({ slides });
 
   return (
-    <section className={styles.container}>
+    <motion.section
+      className={styles.container}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: 'spring',
+        stiffness: 80,
+        damping: 8,
+        mass: 1.2,
+        duration: ANIMATION_DURATION / 1000,
+      }}
+    >
       <Logo />
       <StatementImage />
       <HeroContent
@@ -38,6 +53,6 @@ export default function HeroSection({ slides }: Props) {
         setCurrentSlideIndex={setCurrentSlideIndex}
       />
       <Controls onNext={onNextSlide} onPrev={onPrevSlide} />
-    </section>
+    </motion.section>
   );
 }
