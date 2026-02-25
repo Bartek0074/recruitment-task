@@ -13,13 +13,13 @@ export default function DynamicMedia({ media, priority = false }: Props) {
     return (
       <div className={styles.container}>
         <Image
+          className={styles.image}
           src={media.image.url}
           alt=""
           fill
-          objectFit="cover"
-          objectPosition="center"
           priority={priority}
           sizes="75vw"
+          loading='eager'
         />
       </div>
     );
