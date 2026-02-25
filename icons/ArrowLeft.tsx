@@ -1,4 +1,6 @@
-export default function ArrowLeftIcon(props: React.SVGProps<SVGSVGElement>) {
+import { SVGProps } from 'react';
+
+export default function ArrowLeftIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 26 28" xmlns="http://www.w3.org/2000/svg" fill="none" {...props}>
       <g clipPath="url(#clip0_32_195)">
