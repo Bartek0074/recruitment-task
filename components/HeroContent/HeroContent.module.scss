@@ -17,6 +17,7 @@
 
     .title {
       white-space: pre-line;
+      text-shadow: $text-shadow;
     }
     .icon {
       margin-right: 1.8rem;
@@ -56,6 +57,8 @@
   }
   .text {
     margin-top: 2.2rem;
+    text-shadow: $text-shadow;
+
     @media (min-width: $breakpoint-xl) {
       margin-top: 2.3rem;
     }
